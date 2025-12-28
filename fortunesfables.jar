@@ -1,0 +1,463 @@
+import java.util.Scanner;
+
+public class fortunesfables {
+    
+    public static void clss() { // CLEARS SCREEN
+        
+        System.out.println(" \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
+        
+    }
+    
+    public static void mainGame() {
+        
+        clss();
+        
+        Scanner inp = new Scanner(System.in);
+        String act;
+        String element;
+        String ans;
+        String state;
+        String potion = "wizard";
+        
+        System.out.println("You are playing as Nicholas Cunningham, a gifted, passionate and fortunate wizard who is willing to");
+        System.out.println("embark on a big journey. A journey that will lead you to the sorcerer that killed your father. You");
+        System.out.println("started your journey by talking to a grand wizard.\n ");
+        System.out.println("Grand Wizard: So you are a brave soul, eh? Choose a special element that you will use!\n ");
+        System.out.println("Press 1 to select lightning    Press 2 to select plasma    Press 3 to select wind\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            element = "light";
+        } else if (ans.equals("2")) {
+            element = "plas";
+        } else {
+            element = "wind";
+        }
+        
+        clss();
+        
+        System.out.println(" \nYou chose your element and the grand wizard commanded a guardian angel to be your guiding");
+        System.out.println("light. Additionally, he gave you a special potion that would temporarily increase your total");
+        System.out.println("damage given and fortune. You were thankful and started working on your goal.\n ");
+        System.out.println("Grand Wizard: To start your journey, you first have to raid one of their castles in the north");
+        System.out.println("to obtain a gemstone that would give you the ability to enter the sorcerer's realm. You shall");
+        System.out.println("not worry! Your guardian angel will be here to lead your further!\n ");
+        System.out.println("Press 1 to say that you are ready    Press 2 to say that you are scared\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println(" \nGrand Wizard:  Remarkable! You shall now start your journey!");
+        } else {
+            System.out.println(" \nGrand Wizard: Why are you scared, my child? Your guardian angel will be always here!");
+        }
+        
+        System.out.println(" \nThe grand wizard wished you a good luck, as well as your guardian angel. You started walking");
+        System.out.println("through the swamp that leads you to the castle located in the north. Suddenly, five raiders shouts");
+        System.out.println("at you, attempting to perform a bait.\n ");
+        System.out.println("Supreme Raider: Hey! Do you need any help? Come with us, we have everything!\n*Smiles deviously*\n ");
+        System.out.println("Press 1 to come with them     Press 2 to walk away\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            
+            clss();
+            System.out.println(" \nYou followed the raiders, but as you walk with them, your guardian angel suddenly starts warning you.\n ");
+            System.out.println("Guardian Angel: A while ago I was testing your decisions. You are going in the wrong track! I am warning");
+            System.out.println("you to NOT come with these evil souls, as they will give you bad consequences!\n ");
+            System.out.println("Press 1 to start running away     Press 2 to start a battle with the raiders\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                clss();
+                System.out.println(" \nSupreme Raider: Hey! Where do you think you are going! Everyone! Don't let him escape!\n ");
+                System.out.println("Press 1 to start a battle with the raiders    Press 2 to keep running\n ");
+                
+                ans = inp.nextLine();
+                
+                if (ans.equals("2")) {
+                    clss();
+                    System.out.println(" \nAs you ran away, five more raiders blocked your escape path all of a sudden, leaving you no escape. They");
+                    System.out.println("managed to tie you up, ready to be eaten by the local cannibals.\n ");
+                    System.out.println("YOU LOSE!");
+                    System.exit(0);
+                }
+            }
+            
+        }
+            
+        clss();
+        System.out.println(" \nSupreme Raider: Hey! Do you think that you can get away with that tactic! Fellas, let us battle!\n ");
+            
+        if (element.equals("light")) {
+            System.out.println("Using your lightning element, you eliminated all the raiders through a massive thunderbolt! Although");
+            System.out.println("there is one raider that is barely breathing, begging for forgiveness and revival.\n ");
+            System.out.println("Supreme Raider: P-p-please! Help me! We are very sorry for attempting to capture you! Please!\n ");
+            
+        } else if (element.equals("plas")) {
+            System.out.println("Using your plasma element, you managed to create a massive plasma explosion, killing everyone except");
+            System.out.println("the supreme raider! He was begging for forgiveness and revival.\n ");
+            System.out.println("Supreme Raider: H-h-help! Please! Help us, we are very sorry for trying to capture you!\n ");
+        } else {
+            System.out.println("Using your wind element, you eliminated everyone using a strong tornado! Everyone died from the strong");
+            System.out.println("impact, except the supreme raider. He was begging for forgiveness and revival.\n ");
+            System.out.println("Supreme Raider: P-p-please! We are very sorry for trying to capture you! Please help us!\n ");
+        }
+        
+        System.out.println("Press 1 to leave him alone     Press 2 to send him to the angel's realm\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println(" \nYou stole a necklace from the raider that gives you 20% more defense! You started walking away, continuing");
+            System.out.println("your important journey.\n ");
+            System.out.println("Supreme Raider: W-wait! Don't leave me alone! AHHHHHHHHHHHH!\n ");
+            state = "defensive";
+        } else {
+            clss();
+            System.out.println(" \nYou ordered the guardian angel to send the raider to the angel's realm to convert him into a moral soul.");
+            System.out.println("The angels at the realm rewarded you more dexterity, making you give 50% more damage to enemies!\n ");
+            System.out.println("Guardian Angel: That was a good choice! Now, let us continue heading to the castle.\n ");
+            state = "strong";
+        }
+        
+        System.out.println("8 hours later, while you were walking, you saw a wandering trader looking for items. She approached you and gave you an offer.\n ");
+        System.out.println("Wandering Trader: Good evening, my dear! It looks like you are seeking for a battle! Would you like to trade your potion to");
+        System.out.println("mine? This one gives you a lot of defense, and is also made by the grand wizard's professional chemists!\n ");
+        System.out.println("Press 1 to accept the trade    Press 2 to reject the trade\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            potion = "trader";
+            clss();
+            System.out.println("Wandering Trader: It's a pleasure doing business with you!\n ");
+            System.out.println("Your ability to temporarily increase your damage and fortune is removed, but your overall defense is increased by 80%!\n ");
+        } else {
+            clss();
+            System.out.println("Wandering Trader: Understandable, have a wonderful journey, my dear!\n ");
+        }
+            System.out.println("Guardian Angel: We are now near at the castle! There are two ways to get the gemstone. The easiest approach is sneaking");
+            System.out.println("in, and the most risky way is giving everyone a surprise attack. How are you going to perform this task?\n ");
+            System.out.println("Press 1 to immediately attack everyone (RISKY)    Press 2 to sneak in\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                if (potion.equals("trader") && state.equals("defensive")) {
+                    clss();
+                    System.out.println("You quickly entered the castle and attempted to attack everyone, but there were too many of them! Thankfully,");
+                    System.out.println("you have the supreme raider's necklace and the trader's potion, giving you 100% defense! You drank the potion");
+                    System.out.println("which prevents you from dying. You managed to take out everyone using your remarkable choice of element.");
+                } else {
+                    clss();
+                    System.out.println("You quickly entered the caste and attempted to attack everyone, but there were too many of them! You didn't");
+                    System.out.println("have the strength to take them all out, and they managed to capture you and turn you into a slave.\n ");
+                    System.out.println("YOU LOSE!");
+                    System.exit(0);
+                }
+            } else { // STEALTH
+                clss();
+                System.out.println("You went at the back of the castle and sneaked through the sewers. The sewer is so unattended, that there's");
+                System.out.println("a monster living in it! The monster started staring at you and gets closer to you slowly.\n ");
+                System.out.println("Guardian Angel: That creature is not that strong, but it is too fast to run away from!\n ");
+                System.out.println("Press 1 to perform a suppressed spell    Press 2 to run away\n ");
+                
+                ans = inp.nextLine();
+                
+                if (ans.equals("1")) {
+                    clss();
+                    System.out.println("You performed a basic suppressed spell, killing the creature without alerting anyone. A few minutes later,");
+                    System.out.println("you managed to get in to the castle's library. A knight enters and you immediately hide. The knight is");
+                    System.out.println("looking away, giving you the opportunity to perform an attack or try to get away without alerting.\n ");
+                    System.out.println("Press 1 to perform an attack    Press 2 to move to the other room\n ");
+                    
+                    ans = inp.nextLine();
+                    
+                    if (ans.equals("1")) {
+                        clss();
+                        System.out.println("You used a special spell that penetrated through the knight's armor. Although this attack alerted");
+                        System.out.println("another knight! He noticed the dead body and started going towards you!\n ");
+                        System.out.println("Press 1 to run away    Press 2 to threaten the knight");
+                        
+                        ans = inp.nextLine();
+                        
+                        if (ans.equals("1")) {
+                            clss();
+                            System.out.println("You tried to run away, but the alerted knight managed to alarm the other knights! As you are running");
+                            System.out.println("away, the knights was able to close all gates and they managed to capture you, turning you into a slave.\n ");
+                            System.out.println("YOU LOSE!");
+                            System.exit(0);
+                        } else {
+                            clss();
+                            System.out.println("You showed your dark form, scaring the knight and surrendering its weapons. He whispers...\n ");
+                            System.out.println("Knight: Please, don't kill me! I am just doing what I am being told to do!\n ");
+                            System.out.println("The guardian angel made the knight stunned in a short period of time and refreshed his memory.");
+                        }
+                    } else {
+                        clss();
+                    }
+                        
+
+                    
+                    
+                } else {
+                    clss();
+                    System.out.println("You tried to run away, but the creature was too fast! You also alerted all the knights present.");
+                    System.out.println("You got caught by the creature and ate your entire body.\n ");
+                    System.out.println("YOU LOSE!");
+                    System.exit(0);
+                }
+            } // END OF STEALTH
+            
+            System.out.println("You went to the other room and saw two keys, which is an emerald key and a ruby key.\n ");
+            System.out.println("Press 1 to take the emerald key   Press 2 to take the ruby key\n ");
+                    
+            ans = inp.nextLine();
+                    
+            clss();
+            System.out.println("You took the key and started finding the room containing the gemstone. You found a majestic looking");
+            System.out.println("door, thinking that it's the room that you are looking for. You opened it with the key you took, but");
+            System.out.println("you didn't know that there were three knights inside! You eliminated them all and found a shiny box.");
+            System.out.println("You opened it and you obtained the gemstone! But because of what happened, you alerted all knights!\n ");
+            System.out.println("Press 1 to quickly take the knight's armor and disguise    Press 2 to run away\n ");
+                    
+            ans = inp.nextLine();
+                    
+            if (ans.equals("1")) {
+                clss();
+                System.out.println("You quickly disguised as a knight and hid the bodies. You went outside and said that everything");
+                System.out.println("is doing fine and it's just you tripped on the stairs. The knights understands and continued");
+                System.out.println("guarding the castle, without knowing that you killed the knights and took the gemstone.");
+            } else {
+                clss();
+                System.out.println("You tried running away, but the knights managed to capture you and turn you into their slave.\n ");
+                System.out.println("YOU LOSE!");
+                System.exit(0);
+            }
+            
+        clss();
+        System.out.println("You immediately escaped the castle and continued your journey. The guardian angel started guiding you");
+        System.out.println("to the sorcerer's realm. After 8 hours of resting and 5 hours of walking, you see a friendly village!\n ");
+        System.out.println("Villager: Good afternoon, sir! It looks like you are a traveller! Would you like to join us eat?\n ");
+        System.out.println("Press 1 to join them    Press 2 to walk away\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println("You ate some food and your energy is increased for the next events. You said goodbye to the villagers.");
+        } else {
+            clss();
+        }
+        
+        System.out.println("As you left the village, you started walking towards the sorcerer's realm. While walking on a pathway,");
+        System.out.println("you found a lost traveller seeking for help.\n ");
+        System.out.println("Traveller: Hello, my dear sir. May I ask if you have any water with you?\n ");
+        System.out.println("Press 1 to give water    Press 2 to say no\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println("The traveller was thankful and gave you a mask. This mask increases your fortune for your");
+            System.out.println("following journey. She offered you if you want to come with her\n ");
+            System.out.println("Traveller: Would you like to join me explore a cave?\n ");
+            System.out.println("Press 1 to explore with her    Press 2 to say no\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                clss();
+                System.out.println("You went to a massive cave with the traveller. A few minutes later, you found some");
+                System.out.println("hidden treasure! You took the treasure and your fortune is increased by 10%!\n ");
+                System.out.println("Press 1 to say goodbye    Press 2 to keep hunting\n ");
+                
+                ans = inp.nextLine();
+                
+                if (ans.equals("1")) {
+                    clss();
+                    System.out.println("You say goodbye to the traveller to continue your journey on entering the sorcerer's realm.");
+                } else {
+                    clss();
+                    System.out.println("You found some more treasure! Although these are only collectibles and doesn't affect your");
+                    System.out.println("performance. You say your goodbyes to the traveller and continued your important adventure.");
+                }
+            }
+            
+        } else {
+            clss();
+            System.out.println("Traveller: Oh well... I guess I will find a village that I can stop by. Stay safe, sir!\n ");
+        }
+        
+        System.out.println("You walked away and finally arrived at the sorcerer's realm 5 hours later. You entered the realm");
+        System.out.println("using the gemstone that you obtained. As you enter the realm, the sorcerer's dark abilities was");
+        System.out.println("able to block your connection with the guardian angel, leaving you no guidance.\n ");
+        System.out.println("Press 1 to talk with the sorcerer    Press 2 to battle the sorcerer\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println("The Sorcerer: Ha! You are the little one from the wizard I just exterminated! You really");
+            System.out.println("have the guts to come here, eh? Let us see what you have got!\n ");
+        } else {
+            clss();
+        }
+        
+        if (element.equals("light")) {
+            System.out.println("You attempted to eliminate the sorcerer with a thunder bolt, but he dashed away from it!\n ");
+        } else if (element.equals("plas")) {
+            System.out.println("You attempted to eliminate the sorcerer with a massive plasma ball, but he dodged it!\n ");
+        } else {
+            System.out.println("You attempted to eliminate the sorcerer with twin tornados, but he barely took any damage!\n ");
+        }
+        
+        System.out.println("Press 1 to run away    Press 2 to keep fighting    Press 3 to surrender\n ");
+        
+        ans = inp.nextLine();
+        
+        if (ans.equals("1")) {
+            clss();
+            System.out.println("You tried to run away but there is no escape! The sorcerer immediately eliminated you!");
+            System.out.println("YOU LOSE!");
+            System.exit(0);
+        } else if (ans.equals("2")) {
+            clss();
+            System.out.println("The sorcerer summoned 30 dark souls! Who would you fight first?\n ");
+            System.out.println("Press 1 to fight the sorcerer    Press 2 to fight the dark souls\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                clss();
+                System.out.println("You attempted to fight the sorcerer, but failed because its dark souls is preventing you!");
+            } else {
+                clss();
+            }
+            
+            System.out.println("You killed all 30 dark souls, only leaving the sorcerer and you! Choose an attack!\n ");
+            System.out.println("Press 1 for an elemental attack    Press 2 for a magic spell\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                if (element.equals("plas")) {
+                    clss();
+                    System.out.println("You shot three massive plasma balls, but he managed to dodge them all!\n ");
+                } else if (element.equals("light")) {
+                    clss();
+                    System.out.println("You summoned a massive lighting strike, and the sorcerer took damage!\n ");
+                } else {
+                    clss();
+                    System.out.println("You summoned a triple tornado, and the sorcerer took damage!\n ");
+                }
+            } else {
+                clss();
+                System.out.println("You performed a magic spell to stun the sorcerer, but his dark powers made your wand");
+                System.out.println("malfunction! You cannot perform any spells and you can barely give any decent damage.");
+            }
+            
+            System.out.println("The sorcerer has ran out of dark power! Do something while he is regenerating!\n ");
+            System.out.println("Press 1 to drink potion and attack    Press 2 to stab using a sword\n ");
+            
+            ans = inp.nextLine();
+            
+            if (ans.equals("1")) {
+                if (potion.equals("trader")) {
+                    clss();
+                    System.out.println("You drank your potion and it only increased your defense. You attacked the sorcerer but");
+                    System.out.println("it wasn't enough to kill him! He managed to stun you and you lost the battle!\n \nYOU LOSE!");
+                    System.exit(0);
+                } else {
+                    clss();
+                    System.out.println("You drank your potion and your damage and fortune is temporarily increased. You attacked the sorcerer");
+                    System.out.println("using a special move and managed to make him feel very weak! He tried to do everything, but he can");
+                    System.out.println("barely execute any attacks. Eventually, he dies and his dark kingdom has come to an end.\n ");
+                    System.out.println("THE END - Press 1 to go back to the menu");
+                    
+                    ans = inp.nextLine();
+                    
+                    if (ans.equals("1")) {
+                        menu();
+                    } else {
+                        menu();
+                    }
+                }
+            }
+            
+            clss();
+            
+            System.out.println("You stabbed the sorcerer with a sword, and you managed to slowly decrease its dexterity! Eventually, he became weak");
+            System.out.println("and cannot perform any attacks as his energy and dark power has just started regenerating. Finally, you have killed");
+            System.out.println("the sorcerer that killed your father.\n \nTHE END - Press 1 to go back to the menu");
+            
+            ans = inp.nextLine();
+                    
+            if (ans.equals("1")) {
+                menu();
+            } else {
+                menu();
+            }
+            
+        } else {
+            clss();
+            System.out.println("You surrendered and the sorcerer decided to kill you.\n \nYOU LOSE!");
+            System.exit(0);
+        }
+            
+    }
+    
+    public static void menu() { // MAIN MENU
+        
+        // VARIABLE DECLARATIONS
+        
+        clss();
+        
+        Scanner inp = new Scanner(System.in);
+        String act;
+        
+        // GAME MENU
+        
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⣿⣿⣶⣦⣄⡀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡄");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆");
+        System.out.println("⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⢟⣭⣴⣶⡦⠍⠛⣿⣿⣿⣿⣿⠇");
+        System.out.println("⠈⠳⣶⣤⣤⣶⣿⠿⢫⣾⣿⣿⠋⠀⠀⠀⠀⢸⣿⡟⠛⠁");
+        System.out.println("⠀⠀⠈⠉⠉⠉⠁⣰⣿⣿⣿⠇⠀⢀⣀⣤⣴⣾⣧⣤⣄⡀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⡟⢠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄");
+        System.out.println("⠀⠀⠀⠀⠀⣠⣿⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀");
+        System.out.println("⠀⠀⢀⣠⣶⣿⣿⡿⠋⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠀⠀⠀⠀                  FORTUNE'S FABLE");
+        System.out.println("⠉⠛⠛⠛⠛⠛⠉⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣛⣥⣶⣆");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠏⣥⣤⡙⢟⣫⡴⠿⠿⠿⠷⠿⣷.                    Press 1 to start your journey");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⡜⢿⡿⢃⣌⢻⣟⠛⠻⠶⠶⢶⣾⣿⡄                  Press 2 to close the game");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⡄⣾⣿⣿⣷⡝⢿⣷⣶⣶⣦⡾⠟");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣟⣛⣻⠿⠿⢧⢹⣿⣿⣿⣿⣦⡙⢷⡶⠋");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣝⠻⣿⣿⣛⠷⠌⢿⣿⣿⣿⣿⣿⡆");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣮⣝⠻⣿⣶⣦⣤⣉⠛⠿⢿⠁");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠰⣾⣿⣿⣿⣿⣿⣿⣿⣿⣶⣭⣛⠿⢿⣧⢷⣤⡀");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠛⠿⣿⣿⣿⣿⣷⡦⠉⢿⣿⡷⠦");
+        System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⡿⠋⠀⠀⠈");
+        System.out.println(" ");
+        
+        act = inp.nextLine();
+        
+        if (act.equals("1")) {
+            mainGame();
+        } else {
+            System.exit(0);
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        
+        menu();
+        
+    }
+}
