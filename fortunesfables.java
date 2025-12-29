@@ -460,4 +460,5 @@ public class fortunesfables {
         menu();
         
     }
+
 }
